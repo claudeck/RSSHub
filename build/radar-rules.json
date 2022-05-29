@@ -920,6 +920,20 @@
       }
     ]
   },
+  "behance.net": {
+    "_name": "Behance",
+    "www": [
+      {
+        "title": "User",
+        "docs": "https://docs.rsshub.app/design.html#behance-yong-hu-zuo-pin",
+        "source": [
+          "/:user",
+          "/:user/:types",
+          "/gallery/:galleryid/:galleryname"
+        ]
+      }
+    ]
+  },
   "bendibao.com": {
     "_name": "本地宝",
     ".": [
@@ -1295,6 +1309,35 @@
           "/"
         ],
         "target": "/c114/roll"
+      }
+    ]
+  },
+  "caareviews.org": {
+    "_name": "caa.reviews",
+    ".": [
+      {
+        "title": "Book Reviews",
+        "docs": "https://docs.rsshub.app/journal.html#caa-reviews",
+        "source": [
+          "/reviews/book"
+        ],
+        "target": "/caareviews/book"
+      },
+      {
+        "title": "Exhibition Reviews",
+        "docs": "https://docs.rsshub.app/journal.html#caa-reviews",
+        "source": [
+          "/reviews/exhibition"
+        ],
+        "target": "/caareviews/exhibition"
+      },
+      {
+        "title": "Essays",
+        "docs": "https://docs.rsshub.app/journal.html#caa-reviews",
+        "source": [
+          "/reviews/essay"
+        ],
+        "target": "/caareviews/essay"
       }
     ]
   },
@@ -1751,6 +1794,18 @@
           "/knavi/journals/:name/detail"
         ],
         "target": "/cnki/journals/debut/:name"
+      }
+    ]
+  },
+  "cntheory.com": {
+    "_name": "理论网",
+    "paper": [
+      {
+        "title": "学习时报",
+        "docs": "https://docs.rsshub.app/traditional-media.html#li-lun-wang-xue-xi-shi-bao",
+        "source": [
+          "/"
+        ]
       }
     ]
   },
@@ -4714,6 +4769,48 @@
       }
     ]
   },
+  "huxiu.com": {
+    "_name": "虎嗅",
+    ".": [
+      {
+        "title": "首页资讯",
+        "docs": "https://docs.rsshub.app/new-media.html#hu-xiu",
+        "source": [
+          "/article",
+          "/"
+        ],
+        "target": "/huxiu/article"
+      },
+      {
+        "title": "标签",
+        "docs": "https://docs.rsshub.app/new-media.html#hu-xiu",
+        "source": [
+          "/tags/:id"
+        ]
+      },
+      {
+        "title": "搜索",
+        "docs": "https://docs.rsshub.app/new-media.html#hu-xiu"
+      },
+      {
+        "title": "作者",
+        "docs": "https://docs.rsshub.app/new-media.html#hu-xiu",
+        "source": [
+          "/member/:id/*",
+          "/"
+        ],
+        "target": "/huxiu/author/:id"
+      },
+      {
+        "title": "文集",
+        "docs": "https://docs.rsshub.app/new-media.html#hu-xiu",
+        "source": [
+          "/collection/:id",
+          "/"
+        ]
+      }
+    ]
+  },
   "hyqss.cn": {
     "_name": "衡阳全搜索",
     ".": [
@@ -6522,6 +6619,17 @@
       }
     ]
   },
+  "laohu8.com": {
+    "_name": "老虎社区",
+    ".": [
+      {
+        "title": "个人主页",
+        "docs": "https://docs.rsshub.app/finance.html#lao-hu-she-qu",
+        "source": "/personal/:id",
+        "target": "/laohu8/personal/:id"
+      }
+    ]
+  },
   "latepost.com": {
     "_name": "晚点 Latepost",
     ".": [
@@ -6893,7 +7001,8 @@
           "/:game/home/6",
           "/:game/home/31",
           "/:game/home/33",
-          "/:game/home/53"
+          "/:game/home/53",
+          "/:game/home/58"
         ]
       }
     ]
@@ -7943,13 +8052,13 @@
         "title": "快讯",
         "docs": "https://docs.rsshub.app/new-media.html#panews-kuai-xun",
         "source": "/",
-        "target": "/panewslab/newsflash/:language?"
+        "target": "/panewslab/news"
       },
       {
         "title": "专栏",
         "docs": "https://docs.rsshub.app/new-media.html#panews-zhuan-lan",
         "source": "/",
-        "target": "/panewslab/column/:id"
+        "target": "/panewslab/author/:id"
       },
       {
         "title": "专题",
@@ -8054,6 +8163,16 @@
           "/"
         ],
         "target": "/pku/hr/:category?"
+      }
+    ],
+    "nsd": [
+      {
+        "title": "观点 - 北京大学国家发展研究院",
+        "docs": "https://docs.rsshub.app/university.html#bei-jing-da-xue",
+        "source": [
+          "/"
+        ],
+        "target": "/pku/nsd/gd"
       }
     ],
     "www.rccp": [
@@ -8307,6 +8426,28 @@
           "/",
           "/:category"
         ]
+      }
+    ]
+  },
+  "reuters.com": {
+    "_name": "路透社",
+    ".": [
+      {
+        "title": "分类/话题/作者",
+        "docs": "https://docs.rsshub.app/traditional-media.html#lu-tou-she",
+        "source": [
+          "/:category/:topic?",
+          "/"
+        ],
+        "target": "/reuters/:category/:topic?"
+      },
+      {
+        "title": "深度调查栏目",
+        "docs": "https://docs.rsshub.app/traditional-media.html#lu-tou-she",
+        "source": [
+          "/investigates"
+        ],
+        "target": "/reuters/inverstigates"
       }
     ]
   },
@@ -8745,6 +8886,34 @@
           "/"
         ],
         "target": "/sicau/yan/:category?"
+      }
+    ]
+  },
+  "sobooks.net": {
+    "_name": "SoBooks",
+    ".": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/reading.html#sobooks",
+        "source": [
+          "/:category"
+        ],
+        "target": "/sobooks/:category"
+      },
+      {
+        "title": "标签",
+        "docs": "https://docs.rsshub.app/reading.html#sobooks",
+        "source": [
+          "/books/tag/:tag"
+        ],
+        "target": "/sobooks/tag/:tag"
+      },
+      {
+        "title": "归档",
+        "docs": "https://docs.rsshub.app/reading.html#sobooks",
+        "source": [
+          "/books/date/*date"
+        ]
       }
     ]
   },
@@ -9976,6 +10145,20 @@
       }
     ]
   },
+  "wallpaperhub.app": {
+    "_name": "WallpaperHub",
+    ".": [
+      {
+        "title": "壁纸",
+        "docs": "https://docs.rsshub.app/picture.html#wallpaperhub",
+        "source": [
+          "/wallpaperhub",
+          "/"
+        ],
+        "target": "/wallpaperhub"
+      }
+    ]
+  },
   "wallstreetcn.com": {
     "_name": "华尔街见闻",
     ".": [
@@ -10538,6 +10721,37 @@
           "/i/:id"
         ],
         "target": "/youku/channel/:id"
+      }
+    ]
+  },
+  "youtube.com": {
+    "_name": "YouTube",
+    "www": [
+      {
+        "title": "用户",
+        "docs": "https://docs.rsshub.app/social-media.html#youtube",
+        "source": "/user/:username",
+        "target": "/youtube/user/:username"
+      },
+      {
+        "title": "频道",
+        "docs": "https://docs.rsshub.app/social-media.html#youtube",
+        "source": "/channel/:id",
+        "target": "/youtube/channel/:id"
+      },
+      {
+        "title": "播放列表",
+        "docs": "https://docs.rsshub.app/social-media.html#youtube",
+        "source": "/playlist"
+      },
+      {
+        "title": "订阅列表",
+        "docs": "https://docs.rsshub.app/social-media.html#youtube",
+        "source": [
+          "/feed/subscriptions",
+          "/feed/channels"
+        ],
+        "target": "/youtube/subscriptions"
       }
     ]
   },
@@ -11214,28 +11428,6 @@
         "title": "关键词",
         "docs": "https://docs.rsshub.app/social-media.html#twitter",
         "source": "/search"
-      }
-    ]
-  },
-  "youtube.com": {
-    "_name": "YouTube",
-    "www": [
-      {
-        "title": "用户",
-        "docs": "https://docs.rsshub.app/social-media.html#youtube",
-        "source": "/user/:username",
-        "target": "/youtube/user/:username"
-      },
-      {
-        "title": "频道",
-        "docs": "https://docs.rsshub.app/social-media.html#youtube",
-        "source": "/channel/:id",
-        "target": "/youtube/channel/:id"
-      },
-      {
-        "title": "播放列表",
-        "docs": "https://docs.rsshub.app/social-media.html#youtube",
-        "source": "/playlist"
       }
     ]
   },
@@ -12428,18 +12620,6 @@
         "docs": "https://docs.rsshub.app/anime.html#acfun-yong-hu-tou-gao",
         "source": "/u/:id",
         "target": "/acfun/user/video/:id"
-      }
-    ]
-  },
-  "behance.net": {
-    "_name": "Behance",
-    "www": [
-      {
-        "title": "User",
-        "docs": "https://docs.rsshub.app/design.html#behance-user-works",
-        "source": [
-          "/:user"
-        ]
       }
     ]
   },
