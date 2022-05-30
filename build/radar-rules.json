@@ -296,6 +296,25 @@
       }
     ]
   },
+  "7mmtv.tv": {
+    "_name": "7mmtv.tv",
+    ".": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/multimedia.html#7mmtv-fen-lei",
+        "source": [
+          "/"
+        ]
+      },
+      {
+        "title": "制作商",
+        "docs": "https://docs.rsshub.app/multimedia.html#7mmtv-zhi-zuo-shang",
+        "source": [
+          "/"
+        ]
+      }
+    ]
+  },
   "8kcosplay.com": {
     "_name": "8KCosplay",
     ".": [
@@ -8285,6 +8304,20 @@
       }
     ]
   },
+  "qipamaijia.com": {
+    "_name": "奇葩买家秀",
+    ".": [
+      {
+        "title": "频道",
+        "docs": "https://docs.rsshub.app/reading.html#qi-dian-tu-shou-ding",
+        "source": [
+          "/",
+          "/:cate"
+        ],
+        "target": "/qipamaijia/:cate"
+      }
+    ]
+  },
   "qm120.com": {
     "_name": "全民健康网",
     ".": [
@@ -10595,6 +10628,17 @@
           "/podcast/:id"
         ],
         "target": "/xiaoyuzhou/podcast/:id"
+      }
+    ]
+  },
+  "xiaozhuanlan.com": {
+    "_name": "小专栏",
+    ".": [
+      {
+        "title": "专栏",
+        "docs": "https://docs.rsshub.app/new-media.html#xiao-zhuan-lan",
+        "source": "/:id",
+        "target": "/xiaozhuanlan/column/:id"
       }
     ]
   },
