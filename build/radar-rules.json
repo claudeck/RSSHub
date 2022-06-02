@@ -2658,6 +2658,39 @@
       }
     ]
   },
+  "economist.com": {
+    "_name": "The Economist",
+    ".": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/traditional-media.html#the-economist",
+        "source": [
+          "/:endpoint"
+        ],
+        "target": "/economist/:endpoint"
+      },
+      {
+        "title": "Espresso",
+        "docs": "https://docs.rsshub.app/traditional-media.html#the-economist",
+        "source": [
+          "/the-world-in-brief",
+          "/espresso"
+        ],
+        "target": "/economist/espresso"
+      }
+    ],
+    "gre": [
+      {
+        "title": "GRE Vocabulary",
+        "docs": "https://docs.rsshub.app/traditional-media.html#the-economist",
+        "source": [
+          "/",
+          "/gre-advice/gre-vocabulary/which-words-study/most-common-gre-vocabulary-list-organized-difficulty"
+        ],
+        "target": "/economist/gre-vocabulary"
+      }
+    ]
+  },
   "jxjy.ecust.edu.cn": {
     "_name": "华东理工继续教育学院",
     ".": [
@@ -3090,6 +3123,20 @@
           "/"
         ],
         "target": "/ezone/:category?"
+      }
+    ]
+  },
+  "feng.com": {
+    "_name": "威锋",
+    ".": [
+      {
+        "title": "社区",
+        "docs": "https://docs.rsshub.app/bbs.html#wei-feng",
+        "source": [
+          "/forum/photo/:id",
+          "/forum/:id"
+        ],
+        "target": "/feng/forum/:id"
       }
     ]
   },
@@ -8214,6 +8261,28 @@
       }
     ]
   },
+  "playno1.com": {
+    "_name": "PLAYNO.1玩樂達人",
+    "stno1": [
+      {
+        "title": "情趣",
+        "docs": "https://docs.rsshub.app/bbs.html#playno-1-wan-le-da-ren",
+        "source": [
+          "/stno1/:catid/"
+        ],
+        "target": "/playno1/st/:catid"
+      }
+    ],
+    "www": [
+      {
+        "title": "AV",
+        "docs": "https://docs.rsshub.app/bbs.html#playno-1-wan-le-da-ren",
+        "source": [
+          "/portal.php"
+        ]
+      }
+    ]
+  },
   "polkaworld.org": {
     "_name": "PolkaWorld",
     "www": [
@@ -9685,6 +9754,19 @@
       }
     ]
   },
+  "tiktok.com": {
+    "_name": "TikTok",
+    ".": [
+      {
+        "title": "User",
+        "docs": "https://docs.rsshub.app/en/social-media.html#tiktok",
+        "source": [
+          "/:user"
+        ],
+        "target": "/tiktok/user/:user"
+      }
+    ]
+  },
   "timednews.com": {
     "_name": "时刻新闻",
     ".": [
@@ -10639,6 +10721,18 @@
         "docs": "https://docs.rsshub.app/new-media.html#xiao-zhuan-lan",
         "source": "/:id",
         "target": "/xiaozhuanlan/column/:id"
+      }
+    ]
+  },
+  "xidian.edu.cn": {
+    "_name": "西安电子科技大学",
+    "jwc": [
+      {
+        "title": "教务处",
+        "docs": "https://docs.rsshub.app/university.html#xi-an-dian-zi-ke-ji-da-xue",
+        "source": [
+          "/:category"
+        ]
       }
     ]
   },
