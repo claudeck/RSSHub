@@ -3489,6 +3489,43 @@
       }
     ]
   },
+  "gitee.com": {
+    "_name": "Gitee",
+    ".": [
+      {
+        "title": "仓库 Releases",
+        "link": "https://docs.rsshub.app",
+        "source": [
+          "/:owner/:repo/releases"
+        ],
+        "target": "/gitee/releases/:owner/:repo"
+      },
+      {
+        "title": "仓库提交",
+        "link": "https://docs.rsshub.app",
+        "source": [
+          "/:owner/:repo/commits"
+        ],
+        "target": "/gitee/commits/:owner/:repo"
+      },
+      {
+        "title": "用户公开动态",
+        "link": "https://docs.rsshub.app",
+        "source": [
+          "/:username"
+        ],
+        "target": "/gitee/events/:username"
+      },
+      {
+        "title": "仓库动态",
+        "link": "https://docs.rsshub.app",
+        "source": [
+          "/:owner/:repo"
+        ],
+        "target": "/gitee/events/:owner/:repo"
+      }
+    ]
+  },
   "github.com": {
     "_name": "GitHub",
     ".": [
@@ -3861,6 +3898,19 @@
         "docs": "https://docs.rsshub.app/government.html#bei-jing-shi-wei-sheng-jian-kang-wei-yuan-hui",
         "source": "/xwzx_20031/:caty",
         "target": "/gov/beijing/mhc/:caty"
+      }
+    ]
+  },
+  "customs.gov.cn": {
+    "_name": "中华人民共和国海关总署",
+    "www": [
+      {
+        "title": "拍卖信息 / 海关法规",
+        "docs": "https://docs.rsshub.app/government.html#zhong-hua-ren-min-gong-he-guo-hai-guan-zong-shu",
+        "source": [
+          "/"
+        ],
+        "target": "/gov/customs/list"
       }
     ]
   },
@@ -8172,6 +8222,29 @@
         "docs": "https://docs.rsshub.app/social-media.html#picuki-yong-hu",
         "source": "/profile/:id",
         "target": "/picuki/profile/:id"
+      }
+    ]
+  },
+  "pincong.rocks": {
+    "_name": "品葱",
+    ".": [
+      {
+        "title": "发现",
+        "docs": "https://docs.rsshub.app/bbs.html#pin-cong",
+        "source": "/"
+      },
+      {
+        "title": "精选",
+        "docs": "https://docs.rsshub.app/bbs.html#pin-cong",
+        "source": [
+          "/hot/:category"
+        ]
+      },
+      {
+        "title": "话题",
+        "docs": "https://docs.rsshub.app/bbs.html#pin-cong",
+        "source": "/topic/:topic",
+        "target": "/pincong/topic/:topic"
       }
     ]
   },
