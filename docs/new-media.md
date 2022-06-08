@@ -1616,6 +1616,32 @@ Supported sub-sites:
 
 <Route author="nczitzk" example="/dedao/knowledge" path="/dedao/knowledge/:topic?/:type?" :paramsDesc="['话题 id，可在话题页 URL 中找到', '分享类型，`true` 指精选，`false` 指最新，默认为精选']"/>
 
+## 电动邦
+
+### 资讯
+
+<Route author="Fatpandac" example="/diandong/news" path="/diandong/news/:cate?" :paramsDesc="['分类，见下表，默认为推荐']">
+
+分类
+
+| 推荐 | 新车 | 导购 | 试驾 | 用车 | 技术 | 政策 | 行业 |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| 0  | 29 | 61 | 30 | 75 | 22 | 24 | 23 |
+
+</Route>
+
+### 电动号
+
+<Route author="Fatpandac" example="/diandong/ddh" path="/diandong/ddh/:cate?" :paramsDesc="['分类，见下表，默认为全部']">
+
+分类
+
+| 全部 | 新车 | 导购 | 评测 | 新闻 | 技术 | 政策 | 用车 | 二手车 |
+| -- | -- | -- | -- | -- | -- | -- | -- | --- |
+| 0  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8   |
+
+</Route>
+
 ## 电商报
 
 ### 分区
@@ -2154,6 +2180,14 @@ others = 热点新闻 + 滚动新闻
 ### 「108 将」实战分享
 
 <Route author="nczitzk" example="/jiazhen108" path="/jiazhen108" />
+
+## 健康界
+
+### 首页
+
+<Route author="qnloft" example="/cn-healthcare/index" path="/cn-healthcare/index" />
+
+</Route>
 
 ## 今日热榜
 
@@ -3027,6 +3061,10 @@ column 为 third 时可选的 category:
 > 少数派专栏需要付费订阅，RSS 仅做更新提醒，不含付费内容.
 
 </Route>
+
+### 付费专栏文章更新
+
+<Route author="TonyRL" example="/sspai/series/77" path="/sspai/series/:id" :paramsDesc="['专栏 id']" radar="1" />
 
 ### Shortcuts Gallery
 
@@ -4032,4 +4070,4 @@ QueryString:
 | ---- | ----- | ----- |
 |      | zh-hk | zh-tw |
 
-</Route>
+ </Route>
