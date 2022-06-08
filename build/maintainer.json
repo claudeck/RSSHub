@@ -176,6 +176,18 @@
     "/ash-maurya/ash-maurya": [
         "james-tindal"
     ],
+    "/asiantolick/": [
+        "nczitzk"
+    ],
+    "/asiantolick/category/:id?": [
+        "nczitzk"
+    ],
+    "/asiantolick/tag/:id?": [
+        "nczitzk"
+    ],
+    "/asiantolick/search/:id?": [
+        "nczitzk"
+    ],
     "/asus/bios/:model": [
         "Fatpandac"
     ],
@@ -374,6 +386,9 @@
     "/ciidbnu/:id?": [
         "nczitzk"
     ],
+    "/cn-healthcare/index": [
+        "qnloft"
+    ],
     "/cnbeta/": [
         "nczitzk"
     ],
@@ -452,6 +467,12 @@
     ],
     "/dhu/xxgk/news": [
         "KiraKiseki"
+    ],
+    "/diandong/news/:cate?": [
+        "Fatpandac"
+    ],
+    "/diandong/ddh/:cate?": [
+        "Fatpandac"
     ],
     "/disinfo/publications": [
         "nczitzk"
@@ -791,6 +812,9 @@
         "StevenRCE0"
     ],
     "/getdr/": [
+        "nczitzk"
+    ],
+    "/getitfree/:category?": [
         "nczitzk"
     ],
     "/gf-cn/news/:category?": [
@@ -1551,6 +1575,9 @@
     "/mox/:category?": [
         "nczitzk"
     ],
+    "/mp4er/:type?/:caty?/:area?/:year?/:order?": [
+        "nczitzk"
+    ],
     "/mpaypass/main/:type?": [
         "zhuan-zhu"
     ],
@@ -2045,6 +2072,9 @@
     "/sicau/zsjy/:category?": [
         "nczitzk"
     ],
+    "/sis001/forum/:id": [
+        "TonyRL"
+    ],
     "/sobooks/tag/:id?": [
         "nczitzk"
     ],
@@ -2104,6 +2134,9 @@
     ],
     "/sspai/series": [
         "HenryQW"
+    ],
+    "/sspai/series/:id": [
+        "TonyRL"
     ],
     "/sspai/shortcuts": [
         "Andiedie"
@@ -2539,6 +2572,12 @@
         "mocusez",
         "light0926"
     ],
+    "/xiaohongshu/board/:board_id": [
+        "lotosbin"
+    ],
+    "/xiaohongshu/user/:user_id/:category": [
+        "lotosbin"
+    ],
     "/xiaoyuzhou/": [
         "prnake",
         "Maecenas"
@@ -2742,6 +2781,9 @@
         "jasongzy"
     ],
     "/zuel/notice": [
+        "nczitzk"
+    ],
+    "/zyshow/:region?/:id": [
         "nczitzk"
     ],
     "/1draw": [],
@@ -3080,7 +3122,6 @@
     "/dytt/index": [],
     "/rs05/rs05": [],
     "/qutoutiao/category/:cid": [],
-    "/nhk/news_web_easy": [],
     "/bbc/:site?/:channel?": [],
     "/verge": [],
     "/pediy/topic/:category?/:type?": [],
@@ -3542,8 +3583,6 @@
     "/cnu/discovery/:type?/:category?": [],
     "/zhanqi/room/:id": [],
     "/wineyun/:category": [],
-    "/xiaohongshu/user/:user_id/:category": [],
-    "/xiaohongshu/board/:board_id": [],
     "/kzfeed/topic/:id": [],
     "/factcheck": [],
     "/x-mol/news/:tag?": [],
@@ -4124,8 +4163,6 @@
     "/voa/day-photos": [],
     "/voa/:language/:channel?": [],
     "/6park/:id?/:type?/:keyword?": [],
-    "/mp4er/:type?/:caty?/:area?/:year?/:order?": [],
-    "/bde4/:type?/:caty?/:area?/:year?/:order?": [],
     "/sse/sserules/:slug?": [],
     "/gamegrape/:id?": [],
     "/chsi/zszcgd/:category?": [],
@@ -4226,7 +4263,6 @@
     "/bibgame/:category?/:type?": [],
     "/macau-bolsas/:lang?": [],
     "/potplayer/update/:language?": [],
-    "/zyshow/:name": [],
     "/caus/:category?": [],
     "/modian/zhongchou/:category?/:sort?/:status?": [],
     "/macwk/soft/:name": [],
@@ -4261,7 +4297,6 @@
     "/blogs/foreverblog": [],
     "/netflix/newsroom/:category?/:region?": [],
     "/sbs/chinese/:category?/:id?/:dialect?/:language?": [],
-    "/asiantolick/:category?/:keyword?": [],
     "/researchgate/publications/:id": [],
     "/questmobile/report/:category?/:label?": [],
     "/rss3/blog": [],
