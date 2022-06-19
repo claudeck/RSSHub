@@ -4,6 +4,30 @@ pageClass: routes
 
 # 论坛
 
+## 19 楼
+
+### 头条
+
+<Route author="nczitzk" example="/19lou/jiaxing" path="/19lou/:city?" :paramsDesc="['分类，见下表，默认为 www，即杭州']">
+
+| 杭州  | 台州      | 嘉兴      | 宁波     | 湖州     |
+| --- | ------- | ------- | ------ | ------ |
+| www | taizhou | jiaxing | ningbo | huzhou |
+
+| 绍兴       | 湖州     | 温州      | 金华     | 舟山       |
+| -------- | ------ | ------- | ------ | -------- |
+| shaoxing | huzhou | wenzhou | jinhua | zhoushan |
+
+| 衢州     | 丽水     | 义乌   | 萧山       | 余杭     |
+| ------ | ------ | ---- | -------- | ------ |
+| quzhou | lishui | yiwu | xiaoshan | yuhang |
+
+| 临安    | 富阳     | 桐庐     | 建德     | 淳安     |
+| ----- | ------ | ------ | ------ | ------ |
+| linan | fuyang | tonglu | jiande | chunan |
+
+</Route>
+
 ## 2047
 
 ### 分类
@@ -176,6 +200,18 @@ pageClass: routes
 
 </Route>
 
+## Elastic 中文社区
+
+### 发现
+
+<Route author="nczitzk" example="/elasticsearch-cn" path="/elasticsearch-cn/:params?" :paramsDesc="['分类，可在对应分类页 URL 中找到']">
+
+如 [Elasticsearch 最新](https://elasticsearch.cn/category-2) 的 URL 为 <https://elasticsearch.cn/category-2>，则分类参数处填写 `category-2`，最后得到路由地址 [`/elasticsearch-cn/category-2`](https://rsshub.app/elasticsearch-cn/category-2)。
+
+又如 [求职招聘 30 天热门](https://elasticsearch.cn/sort_type-hot\_\_\_\_category-12\__day-30) 的 URL 为 <https://elasticsearch.cn/sort_type-hot____category-12__day-30>，则分类参数处填写 `sort_type-hot____category-12__day-30`，最后得到路由地址 [`/elasticsearch-cn/sort_type-hot____category-12__day-30`](https://rsshub.app/elasticsearch-cn/sort_type-hot\_\_\_\_category-12\__day-30)。
+
+</Route>
+
 ## eTOLAND
 
 ### 主题贴
@@ -248,7 +284,7 @@ pageClass: routes
 
 ### AV
 
-<Route author="TonyRL" example="/playno1/av" path="/playno1/av/:catid?" :paramsDesc="['分类，见下表，默认为全部文章']" radar="1" rssbud="1"> 
+<Route author="TonyRL" example="/playno1/av" path="/playno1/av/:catid?" :paramsDesc="['分类，见下表，默认为全部文章']" radar="1" rssbud="1">
 
 | 全部文章 | AV 新聞 | AV 導覽 |
 | ---- | ----- | ----- |
@@ -258,7 +294,7 @@ pageClass: routes
 
 ### 情趣
 
-<Route author="TonyRL" example="/playno1/st" path="/playno1/st/:catid?" :paramsDesc="['分类，见下表，默认为全部文章']" radar="1" rssbud="1"> 
+<Route author="TonyRL" example="/playno1/st" path="/playno1/st/:catid?" :paramsDesc="['分类，见下表，默认为全部文章']" radar="1" rssbud="1">
 
 | 全部文章 | 情趣體驗報告     | 情趣新聞 | 情趣研究所    |
 | ---- | ---------- | ---- | -------- |
@@ -728,7 +764,7 @@ pageClass: routes
 
 ### 社区
 
-<Route author="TonyRL" example="/feng/forum/1" path="/feng/forum/:id/:type?" :paramsDesc="['版块 ID，可在版块 URL 找到', '排序，见下表，默认为 `all`']" radar="1" rssbud="1"> 
+<Route author="TonyRL" example="/feng/forum/1" path="/feng/forum/:id/:type?" :paramsDesc="['版块 ID，可在版块 URL 找到', '排序，见下表，默认为 `all`']" radar="1" rssbud="1">
 
 | 最新回复   | 最新发布 | 热门  | 精华      |
 | ------ | ---- | --- | ------- |
@@ -973,7 +1009,7 @@ pageClass: routes
 
 ### 分类
 
-<Route author="sanmmm" example="/lingyi/qiwenyishi" path="/lingyi/:qiwenyishi" :paramsDesc="['分类']"> 
+<Route author="sanmmm" example="/lingyi/qiwenyishi" path="/lingyi/:qiwenyishi" :paramsDesc="['分类']">
 
 | 编辑推荐    | 奇闻异事       | 鬼话连篇           |
 | ------- | ---------- | -------------- |

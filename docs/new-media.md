@@ -848,7 +848,7 @@ IPFS 网关有可能失效，那时候换成其他网关。
 
 ### User
 
-<Route author="fifteen42 rde9" example="/mirror/tingfei.eth" path="/mirror/:id" :paramsDesc="['user id']" />
+<Route author="fifteen42 rde9 nczitzk" example="/mirror/tingfei.eth" path="/mirror/:id" :paramsDesc="['user id']" />
 
 ## MIT 科技评论
 
@@ -1519,6 +1519,12 @@ Supported sub-sites:
 ### 快讯
 
 <Route author="Fatpandac" example="/chaping/newsflash" path="/chaping/newsflash"/>
+
+## 产品沉思录
+
+### 首页
+
+<Route author="nczitzk" example="/pmthinking" path="/pmthinking" />
 
 ## 城农 Growin' City
 
@@ -3101,6 +3107,21 @@ column 为 third 时可选的 category:
 ### 标签订阅
 
 <Route author="Jeason0228" example="/sspai/tag/apple" path="/sspai/tag/:keyword" :paramsDesc="['关键词']" radar="1"/>
+
+## 深潮 TechFlow
+
+### 分类
+
+<Route author="nczitzk" example="/techflow520" path="/techflow520/:category?" :paramsDesc="['分类，见下表，默认为头条']">
+
+| 头条 | 元宇宙 | 项目 | DeFi | 矿业 | 隐私计算 | 碳中和 | 活动 | NFT | 产业 |
+| -- | --- | -- | ---- | -- | ---- | --- | -- | --- | -- |
+
+</Route>
+
+### 快讯
+
+<Route author="nczitzk" example="/techflow520/newsflash" path="/techflow520/newsflash"/>
 
 ## 深焦
 
