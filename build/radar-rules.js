@@ -38,6 +38,19 @@
         docs:"https://docs.rsshub.app/anime.html#18comic-jin-man-tian-tang-wen-ku",
         source:[ "/" ],
         target:"/18comic/blogs/:category?" } ] },
+  "19lou.com":{ _name:"19 楼",
+    ".":[ { title:"头条",
+        docs:"https://docs.rsshub.app/bbs.html#19-lou-tou-tiao",
+        source:[ "/" ],
+        target:(params, url) => `/19lou/${new URL(url).toString().match(/\/\/(.*?)\.19lou/)[1]}` } ],
+    www:[ { title:"头条",
+        docs:"https://docs.rsshub.app/bbs.html#19-lou-tou-tiao",
+        source:[ "/" ],
+        target:"/19lou/www" } ],
+    jiaxing:[ { title:"头条",
+        docs:"https://docs.rsshub.app/bbs.html#19-lou-tou-tiao",
+        source:[ "/" ],
+        target:"/19lou/jiaxing" } ] },
   "35photo.pro":{ _name:"35PHOTO",
     ".":[ { title:"New photos",
         docs:"https://docs.rsshub.app/picture.html#35photo-new-photos",
@@ -281,6 +294,11 @@
         source:[ "/:category",
           "/" ],
         target:"/8world/:category?" } ] },
+  "91porn.com":{ _name:"91porn",
+    ".":[ { title:"91porn",
+        docs:"https://docs.rsshub.app/multimedia.html#_91porn",
+        source:[ "/index.php" ],
+        target:"/91porn" } ] },
   "95mm.org":{ _name:"MM范",
     ".":[ { title:"分类",
         docs:"https://docs.rsshub.app/picture.html#mm-fan-fen-lei",
@@ -1049,6 +1067,15 @@
         docs:"https://docs.rsshub.app/programming.html#cncf",
         source:[ "/reports" ],
         target:"/cncf/reports" } ] },
+  "cnjxol.com":{ _name:"南湖清风",
+    ".":[ { title:"嘉兴日报",
+        docs:"https://docs.rsshub.app/traditional-media.html#nan-hu-qing-feng-jia-xing-ri-bao",
+        source:[ "/" ],
+        target:"/cnjxol/jxrb/:id" },
+      { title:"南湖晚报",
+        docs:"https://docs.rsshub.app/traditional-media.html#nan-hu-qing-feng-nan-hu-wan-bao",
+        source:[ "/" ],
+        target:"/cnjxol/nhwb/:id" } ] },
   "cnki.net":{ _name:"中国知网",
     navi:[ { title:"期刊",
         docs:"https://docs.rsshub.app/journal.html#zhong-guo-zhi-wang-qi-kan",
@@ -1233,6 +1260,20 @@
           "/r/:owner/:image/tags",
           "/_/:image" ],
         target:(params) => `/dockerhub/tag/${params.owner ? params.owner : 'library'}/${params.image}` } ] },
+  "domp4.cc":{ _name:"domp4电影",
+    ".":[ { title:"最近更新",
+        docs:"https://docs.rsshub.app/multimedia.html#domp4-ying-shi",
+        source:[ "/",
+          "/custom/update.html" ],
+        target:"/domp4/latest/:type?" },
+      { title:"剧集订阅",
+        docs:"https://docs.rsshub.app/multimedia.html#domp4-ying-shi",
+        source:"/html/:id",
+        target:"/domp4/detail/:id" },
+      { title:"剧集订阅",
+        docs:"https://docs.rsshub.app/multimedia.html#domp4-ying-shi",
+        source:"/detail/:id",
+        target:"/domp4/detail/:id" } ] },
   "dongqiudi.com":{ _name:"懂球帝",
     m:[ { title:"新闻",
         docs:"https://docs.rsshub.app/new-media.html#dong-qiu-di",
@@ -1530,6 +1571,12 @@
         docs:"https://docs.rsshub.app/university.html#hua-dong-li-gong-ji-xu-jiao-yu-xue-yuan",
         source:"/yeDaZhuanLan.aspx?pk=153",
         target:"/ecust-jxjy/news" } ] },
+  "elasticsearch.cn":{ _name:"Elastic 中文社区",
+    ".":[ { title:"发现",
+        docs:"https://docs.rsshub.app/bbs.html#elastic-zhong-wen-she-qu-fa-xian",
+        source:[ "/:params",
+          "/" ],
+        target:"/elasticsearch-cn/:params" } ] },
   "sciencedirect.com":{ _name:"ScienceDirect",
     ".":[ { title:"Journal",
         docs:"https://docs.rsshub.app/journal.html#sciencedirect-journal",
@@ -2013,8 +2060,12 @@
         source:[ "/*" ],
         target:(params, url) => `/gov/anhui/kjt${new URL(url).href.match(/kjt\.ah\.gov\.cn(.*)\/index.html/)[1] ?? ''}` } ] },
   "beijing.gov.cn":{ _name:"北京市人民政府",
+    jw:[ { title:"北京市教育委员会通知公告",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-jiao-yu-wei-yuan-tong-zhi-gong-gao",
+        source:[ "/tzgg" ],
+        target:"/gov/beijing/jw/tzgg" } ],
     kw:[ { title:"北京市科委央地协同",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1132') {
@@ -2022,7 +2073,7 @@
                     }
                 } },
       { title:"北京市科委三城一区",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1134') {
@@ -2030,7 +2081,7 @@
                     }
                 } },
       { title:"北京市科委高精尖产业",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1136') {
@@ -2038,7 +2089,7 @@
                     }
                 } },
       { title:"北京市科委开放创新",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1138') {
@@ -2046,7 +2097,7 @@
                     }
                 } },
       { title:"北京市科委深化改革",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1140') {
@@ -2054,7 +2105,7 @@
                     }
                 } },
       { title:"北京市科委内设机构",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col746') {
@@ -2062,7 +2113,7 @@
                     }
                 } },
       { title:"北京市科委直属机构",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col748') {
@@ -2070,7 +2121,7 @@
                     }
                 } },
       { title:"北京市科委行政许可",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1520') {
@@ -2078,7 +2129,7 @@
                     }
                 } },
       { title:"北京市科委行政处罚",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1522') {
@@ -2086,7 +2137,7 @@
                     }
                 } },
       { title:"北京市科委行政确认",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1524') {
@@ -2094,7 +2145,7 @@
                     }
                 } },
       { title:"北京市科委行政奖励",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1526') {
@@ -2102,7 +2153,7 @@
                     }
                 } },
       { title:"行北京市科委政检查",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1528') {
@@ -2110,7 +2161,7 @@
                     }
                 } },
       { title:"北京市科委其他权力",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1542') {
@@ -2118,7 +2169,7 @@
                     }
                 } },
       { title:"北京市科委最新政策",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col2380') {
@@ -2126,7 +2177,7 @@
                     }
                 } },
       { title:"北京市科委科技政策-科技法规规章文件",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col2962' || params.channel === 'col2384') {
@@ -2134,7 +2185,7 @@
                     }
                 } },
       { title:"北京市科委科技政策-科委规范性文件",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col2962' || params.channel === 'col2386') {
@@ -2142,7 +2193,7 @@
                     }
                 } },
       { title:"北京市科委科技政策-其他科技政策",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col2962' || params.channel === 'col2388') {
@@ -2150,7 +2201,7 @@
                     }
                 } },
       { title:"北京市科委国家科技政策",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col2964') {
@@ -2158,7 +2209,7 @@
                     }
                 } },
       { title:"北京市科委政策解读",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col2396') {
@@ -2166,7 +2217,7 @@
                     }
                 } },
       { title:"北京市科委通知公告",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col736') {
@@ -2174,7 +2225,7 @@
                     }
                 } },
       { title:"北京市科委新闻中心",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col6382') {
@@ -2182,7 +2233,7 @@
                     }
                 } },
       { title:"北京市科委要闻",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col6344') {
@@ -2190,7 +2241,7 @@
                     }
                 } },
       { title:"北京市科委工作动态",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col2330') {
@@ -2198,7 +2249,7 @@
                     }
                 } },
       { title:"北京市科委媒体报道",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col2332') {
@@ -2206,7 +2257,7 @@
                     }
                 } },
       { title:"北京市科委图片报道",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col6346') {
@@ -2214,7 +2265,7 @@
                     }
                 } },
       { title:"北京市科委政府网站年报专栏",
-        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-、-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
+        docs:"https://docs.rsshub.app/government.html#bei-jing-shi-ke-xue-ji-shu-wei-yuan-hui-zhong-guan-cun-ke-ji-yuan-qu-guan-li-wei-yuan-hui",
         source:[ "/col/:channel/index.html" ],
         target:(params) => {
                     if (params.channel === 'col1008') {
@@ -2573,6 +2624,28 @@
         docs:"https://docs.rsshub.app/new-media.html#zhu-hai-wang-lan-mu",
         source:"/",
         target:"/hizu/:column?" } ] },
+  "hk01.com":{ _name:"香港01",
+    www:[ { title:"最 Hit",
+        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
+        source:[ "/hot",
+          "/" ],
+        target:"/hk01/hot" },
+      { title:"zone",
+        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
+        source:"/zone/:id/:title",
+        target:"/hk01/zone/:id" },
+      { title:"channel",
+        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
+        source:"/channel/:id/:title",
+        target:"/hk01/channel/:id" },
+      { title:"issue",
+        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
+        source:"/issue/:id/:title",
+        target:"/hk01/issue/:id" },
+      { title:"tag",
+        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
+        source:"/tag/:id/:title",
+        target:"/hk01/tag/:id" } ] },
   "hkej.com":{ _name:"信报财经新闻",
     ".":[ { title:"即时新闻",
         docs:"https://docs.rsshub.app/traditional-media.html##xin-bao-cai-jing-xin-wen",
@@ -2745,14 +2818,14 @@
         source:[ "/:lang/press/index.html" ],
         target:"/icac/news/:lang" } ] },
   "ieee.org":{ _name:"IEEE",
-    www:[ { title:"latestVolume",
+    www:[ { title:"Journal",
         docs:"https://docs.rsshub.app/journal.html#ieee-xplore",
         source:"/*",
-        target:(params, url) => `/ieee/${new URL(url).searchParams.get('punumber')}/latest/vol` },
-      { title:"latestDate",
+        target:(params, url) => `/ieee/journal/${new URL(url).searchParams.get('punumber')}` },
+      { title:"Recent",
         docs:"https://docs.rsshub.app/journal.html#ieee-xplore",
         source:"/*",
-        target:(params, url) => `/ieee/${new URL(url).searchParams.get('punumber')}/latest/date` } ] },
+        target:(params, url) => `/ieee/journal/${new URL(url).searchParams.get('punumber')}/recent` } ] },
   "neea.cn":{ _name:"中国教育考试网",
     jlpt:[ { title:"教育部考试中心日本语能力测试重要通知",
         docs:"https://docs.rsshub.app/study.html#jiao-yu-bu-kao-shi-zhong-xin-ri-ben-yu-neng-li-ce-shi-zhong-yao-tong-zhi",
@@ -2860,6 +2933,22 @@
         docs:"https://docs.rsshub.app/journal.html#ieee-xplore",
         source:[ "/report.shtml" ],
         target:"/iresearch/report" } ] },
+  "itch.io":{ _name:"itch.io",
+    ".":[ { title:"Browse",
+        docs:"https://docs.rsshub.app/game.html#itch-io-browse",
+        source:[ "/" ],
+        target:(params, url) => `/itch${new URL(url).toString().split('itch.io').pop()}` },
+      { title:"Developer Logs",
+        docs:"https://docs.rsshub.app/game.html#itch-io-developer-logs",
+        source:[ "/" ],
+        target:(params, url) => {
+                    const matches = new URL(url).toString().match(/\/\/(.*?)\.itch\.io\/(.*?)\/devlog/);
+                    return `/itch/devlog/${matches[1]}/${matches[2]}`;
+                } },
+      { title:"Posts",
+        docs:"https://docs.rsshub.app/game.html#itch-io-posts",
+        source:[ "/t/:topic/:id" ],
+        target:"/itch/posts/:topic/:id" } ] },
   "ithome.com":{ _name:"IT 之家",
     ".":[ { title:"标签",
         docs:"https://docs.rsshub.app/new-media.html#it-zhi-jia-zhuan-ti",
@@ -2945,15 +3034,6 @@
         source:[ "/:category",
           "/" ],
         target:"/jandan/:category?" } ] },
-  "scitation.org":{ _name:"JASA",
-    asa:[ { title:"latest",
-        docs:"https://docs.rsshub.app/journal.html#jasa",
-        source:"/*",
-        target:"/jasa/latest" },
-      { title:"section",
-        docs:"https://docs.rsshub.app/journal.html#jasa",
-        source:"/*",
-        target:(params, url) => `/jasa/section/${new URL(url).searchParams.get('tocSection')}` } ] },
   "javbus.com":{ _name:"JavBus",
     www:[ { title:"首页",
         docs:"https://docs.rsshub.app/multimedia.html#javbus",
@@ -4008,6 +4088,16 @@
   "miris.design":{ _name:"Stratechery by Ben Thompson",
     blog:[ { title:"Articles",
         docs:"https://docs.rsshub.app/en/blog.html#stratechery-by-ben-thompson" } ] },
+  "mirror.xyz":{ _name:"Mirror",
+    ".":[ { title:"User",
+        docs:"https://docs.rsshub.app/new-media.html#mirror-user",
+        source:[ "/:id",
+          "/" ],
+        target:(params, url) => {
+                    const matches = new URL(url).toString().match(/https:\/\/(.*?)\.mirror\.xyz/);
+                    const id = matches ? matches[1] : params.id;
+                    return `/mirror/${id}`;
+                } } ] },
   "mobilism.org":{ _name:"Mobilism",
     ".":[ { title:"论坛",
         docs:"https://docs.rsshub.app/bbs.html#mobilism",
@@ -4067,6 +4157,11 @@
         source:[ "/search/label/:label",
           "/" ],
         target:"/mygopen/:label?" } ] },
+  "mysql.com":{ _name:"MySQL",
+    dev:[ { title:"Release Notes",
+        docs:"https://docs.rsshub.app/programming.html#mysql-release-notes",
+        source:[ "/" ],
+        target:(params, url) => `/mysql/release/${new URL(url).toString().match(/\/mysql\/(.*?)\//)[1]}` } ] },
   "nationalgeographic.com":{ _name:"国家地理",
     ".":[ { title:"每日一图",
         docs:"https://docs-rsshub.pages.dev/picture.html#guo-jia-di-li",
@@ -4623,6 +4718,11 @@
         source:[ "/hk/finance/index.html",
           "/hk/finance/index_cn.html" ],
         target:"/oncc/zh-hans/finance" } ] },
+  "openwrt.org":{ _name:"Openwrt",
+    ".":[ { title:"Model Releases",
+        docs:"https://docs.rsshub.app/program-update.html#openwrt",
+        source:"/toh/:band/:model",
+        target:"/openwrt/releases/:model" } ] },
   "orcid.org":{ _name:"ORCID",
     ".":[ { title:"作品列表",
         docs:"https://docs.rsshub.app/study.html#orcid",
@@ -4802,6 +4902,11 @@
         docs:"https://docs.rsshub.app/bbs.html#playno-1-wan-le-da-ren",
         source:[ "/portal.php" ],
         target:(_params, url) => `/playno1/av/${new URL(url).searchParams.get('catid')}` } ] },
+  "pmthinking.com":{ _name:"产品沉思录",
+    ".":[ { title:"首页",
+        docs:"https://docs.rsshub.app/new-media.html#chan-pin-chen-si-lu-shou-ye",
+        source:[ "/" ],
+        target:"/pmthinking" } ] },
   "polkaworld.org":{ _name:"PolkaWorld",
     www:[ { title:"最新资讯",
         docs:"https://docs.rsshub.app/blog.html#polkaworld",
@@ -4990,6 +5095,15 @@
         source:[ "/u/:id",
           "/" ],
         target:"/sciencenet/user/:id" } ] },
+  "scitation.org":{ _name:"scitation",
+    ".":[ { title:"journal",
+        docs:"https://docs.rsshub.app/journal.html#scitation",
+        source:":pub.scitation.org/toc/:jrn",
+        target:"/scitation/:pub/:jrn" },
+      { title:"section",
+        docs:"https://docs.rsshub.app/journal.html#scitation",
+        source:":pub.scitation.org/toc/:jrn",
+        target:(params, url) => `/scitation/:pub/:jrn/${new URL(url).searchParams.get('tocSection')}` } ] },
   "sdu.edu.cn":{ _name:"山东大学",
     "xinwen.wh":[ { title:"(威海)新闻网|校园要闻",
         docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
@@ -5360,6 +5474,11 @@
         docs:"https://docs.rsshub.app/multimedia.html#spotify",
         source:[ "/" ],
         target:"/spotify/top/artists" } ] },
+  "springer.com":{ _name:"Springer",
+    www:[ { title:"latest",
+        docs:"https://docs.rsshub.app/journal.html#Springer",
+        source:"/journal/:journal/*",
+        target:"/springer/journal/:journal" } ] },
   "sputniknews.cn":{ _name:"俄罗斯卫星通讯社",
     ".":[ { title:"分类",
         docs:"https://docs.rsshub.app/traditional-media.html#e-luo-si-wei-xing-tong-xun-she-fen-lei",
@@ -5631,6 +5750,15 @@
         source:[ "/app/:id/review",
           "/app/:id" ],
         target:"/taptap/review/:id" } ] },
+  "techflow520.com":{ _name:"深潮TechFlow",
+    ".":[ { title:"分类",
+        docs:"https://docs.rsshub.app/new-media.html#shen-chao-techflow-fen-lei",
+        source:[ "/" ],
+        target:"/techflow520/:category?" },
+      { title:"快讯",
+        docs:"https://docs.rsshub.app/new-media.html#shen-chao-techflow-kuai-xun",
+        source:[ "/newsflash" ],
+        target:"/techflow520/newsflash" } ] },
   "t.me":{ _name:"Telegram",
     ".":[ { title:"频道",
         docs:"https://docs.rsshub.app/social-media.html#telegram",
@@ -5650,6 +5778,13 @@
         docs:"https://docs.rsshub.app/social-media.html#telegram-telegram-blog",
         source:"/blog",
         target:"/telegram/blog" } ] },
+  "tencent.com":{ _name:"腾讯云",
+    ".":[ { title:"云+社区专栏",
+        docs:"https://docs.rsshub.app/programming.html#teng-xun-yun-yun-she-qu-zhuan-lan",
+        source:[ "/developer/column/:id",
+          "/developer/column/:id/:tag",
+          "/" ],
+        target:(params, url) => `/tencent/cloud/column/${url.match(/column\/(\d+)/)[1]}${/\/tag-\d+/.test(url) ? `/${url.match(/\/tag-(\d+)/)[1]}` : ''}` } ] },
   "thecover.cn":{ _name:"封面新闻",
     ".":[ { title:"频道",
         docs:"https://docs.rsshub.app/new-media.html#the-cover",
@@ -7483,28 +7618,6 @@
         docs:"https://docs.rsshub.app/government.html#bei-jing-jiao-yu-kao-shi-yuan",
         source:[ "/html/zkkd" ],
         target:"/gov/beijing/bjeea/zkkd" } ] },
-  "hk01.com":{ _name:"香港01",
-    www:[ { title:"最 Hit",
-        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
-        source:[ "/hot",
-          "/" ],
-        target:"/hk01/hot" },
-      { title:"zone",
-        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
-        source:"/zone/:id/:title",
-        target:"/hk01/zone/:id" },
-      { title:"channel",
-        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
-        source:"/channel/:id/:title",
-        target:"/hk01/channel/:id" },
-      { title:"issue",
-        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
-        source:"/issue/:id/:title",
-        target:"/hk01/issue/:id" },
-      { title:"tag",
-        docs:"https://docs.rsshub.app/traditional-media.html#xiang-gang-01",
-        source:"/tag/:id/:title",
-        target:"/hk01/tag/:id" } ] },
   "popiapp.cn":{ _name:"Popi 提问箱",
     www:[ { title:"提问箱新回答",
         docs:"https://docs.rsshub.app/social-media.html#popi-ti-wen-xiang",
