@@ -56,7 +56,25 @@ pageClass: routes
 
 </Route>
 
+## Seeking Alpha
+
+### Summary
+
+<Route author="TonyRL" example="/seekingalpha/TSM/transcripts" path="/seekingalpha/:symbol/:category?" :paramsDesc="['股票代号', '分类，见下表，默认为 `news`']"  radar="1" rssbud="1">
+
+| Analysis | News | Transcripts | Press Releases | Related Analysis |
+| -------- | ---- | ----------- | -------------- | ---------------- |
+| analysis | news | transcripts | press-releases | related-analysis |
+
+</Route>
+
 ## TokenInsight
+
+::: tip 提示
+
+TokenInsight 官方亦有提供 RSS，可参考 <https://api.tokeninsight.com/reference/rss>。
+
+:::
 
 ### 博客
 
@@ -151,6 +169,12 @@ pageClass: routes
 | 1000 | 1003 | 1007 | 1005 | 1006 | 1118 | 1032 | 1119 | 1111 |
 
 </Route>
+
+## 第一财经杂志
+
+### 首页
+
+<Route author="nczitzk" example="/cbnweek" path="/cbnweek"/>
 
 ## 东方财富
 
@@ -359,15 +383,21 @@ pageClass: routes
 
 <Route author="kdanfly" example="/chinacef/portal/hot" path="/chinacef/portal/hot" radar="1" rssbud="1" />
 
-## 淘股吧股票论坛
+## 淘股吧
 
-### 论坛总版
+### 淘股论坛
 
-<Route author="emdoe" example="/taoguba/index" path="/taoguba/index"/>
+<Route author="emdoe nczitzk" example="/taoguba" path="/taoguba/:category?" :paramsDesc="['分类，见下表，默认为社区总版']">
+
+| 淘股论坛 | 社区总版    | 精华加油    | 网友点赞    |
+| ---- | ------- | ------- | ------- |
+| bbs  | zongban | jinghua | dianzan |
+
+</Route>
 
 ### 用户博客
 
-<Route author="emdoe" example="/taoguba/user/252069" path="/taoguba/user/:uid" :paramsDesc="['用户 id']" />
+<Route author="emdoe nczitzk" example="/taoguba/blog/252069" path="/taoguba/blog/:id" :paramsDesc="['博客 id，可在对应博客页中找到']" />
 
 ## 乌拉邦
 
@@ -410,6 +440,10 @@ pageClass: routes
 ### 用户自选动态
 
 <Route author="hillerliao" example="/xueqiu/user_stock/1247347556" path="/xueqiu/user_stock/:id" :paramsDesc="['用户 id, 可在用户主页 URL 中找到']"/>
+
+### 用户专栏
+
+<Route author="TonyRL" example="/xueqiu/column/9962554712" path="/xueqiu/column/:id" :paramsDesc="['用户 id, 可在用户主页 URL 中找到']" radar="1" rssbud="1"/>
 
 ### 蛋卷基金净值更新
 
