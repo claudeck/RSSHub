@@ -2239,6 +2239,9 @@
     "/knowmedia/:category?": [
         "Fatpandac"
     ],
+    "/kumw5/comic/:id": [
+        "claudej"
+    ],
     "/kuwaitlocal/": [
         "TonyRL"
     ],
