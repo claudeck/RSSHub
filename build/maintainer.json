@@ -2347,7 +2347,7 @@
     "/kuaidi100/track/:number/:id/:phone?": [
         "NeverBehave"
     ],
-    "/kumw5/comic/:id": [
+    "/kumw6/comic/:id": [
         "claudej"
     ],
     "/kuwaitlocal/": [
