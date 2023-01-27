@@ -340,7 +340,7 @@ Country
 
 ### News
 
-<RouteEn author="zoenglinghou" example="/google/news/Headlines/hl=en-US&gl=US&ceid=US:en" path="/google/news/:category/:locale" :paramsDesc="['Category Title', 'locales, could be found behind `?`, including `hl`, `gl`, and `ceid` as parameters']"/>
+<RouteEn author="zoenglinghou" example="/google/news/Top stories/hl=en-US&gl=US&ceid=US:en" path="/google/news/:category/:locale" :paramsDesc="['Category Title', 'locales, could be found behind `?`, including `hl`, `gl`, and `ceid` as parameters']"/>
 
 ## Grub Street
 
@@ -514,9 +514,9 @@ Edition
 
 ### Topics
 
-<RouteEn author="emdoe" example="/nautilus/topic/Art" path="/nautilus/topic/:tid" :paramsDesc="['topic']">
+<RouteEn author="emdoe" example="/nautil/topic/arts" path="/nautil/topic/:tid" :paramsDesc="['topic']">
 
-This route provides a flexible plan with full text content to subscribe specific topic(s) on the Nautilus. Please visit [nautil.us](http://nautil.us) and click `Topics` to acquire whole topic list.
+This route provides a flexible plan with full text content to subscribe specific topic(s) on the Nautilus. Please visit [nautil.us](https://nautil.us) and click `Topics` to acquire whole topic list.
 
 </RouteEn>
 
@@ -580,12 +580,6 @@ Compared to the official one, this feed:
 | fr       | en      | es      | zh-hans  | zh-hant  | ar      | pa     | tl      |
 
 </RouteEn>
-
-## Research Gate
-
-### Publications
-
-<RouteEn author="nczitzk" example="/researchgate/publications/Somsak-Panha" path="/researchgate/publications/:username" :paramsDesc="['Username, can be found in URL']"/>
 
 ## RSS3
 
@@ -698,7 +692,7 @@ Compared to the official one, this feed:
 
 ### News
 
-<RouteEn author="nczitzk" example="/skysports/news/ac-milan" path="/skysports/news/:team" :paramsDesc="['Team id, can be found in URL to the team page']" />\
+<RouteEn author="nczitzk" example="/skysports/news/ac-milan" path="/skysports/news/:team" :paramsDesc="['Team id, can be found in URL to the team page']" />
 
 ## Soomal
 

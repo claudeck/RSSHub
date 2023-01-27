@@ -10,12 +10,6 @@ pageClass: routes
 
 <Route author="nczitzk" example="/acm/amturingaward" path="/acm/amturingaward"/>
 
-## ACM-ECNU 比赛
-
-### 华东师范大学 ACM OJ 比赛列表
-
-<Route author="a180285" example="/acm-ecnu/contest/public" path="/acm-ecnu/contest/:category?" radar="1" rssbud="1" :paramsDesc="['分类可选，不写代表全部，`public` 代表仅订阅公开比赛']" />
-
 ## AI 研习社
 
 ### 首页
@@ -228,6 +222,7 @@ GitHub 官方也提供了一些 RSS:
 -   仓库 commits: `https://github.com/:owner/:repo/commits.atom`
 -   用户动态: `https://github.com/:user.atom`
 -   专属动态: `https://github.com/:user.private.atom?token=:secret` (登录后在[仪表盘页面](https://github.com)找到 **Subscribe to your news feed** 字样即可)
+-   Wiki 历史: `https://github.com/:owner/:repo/wiki.atom`
 
 :::
 
@@ -313,7 +308,11 @@ GitHub 官方也提供了一些 RSS:
 
 ### Issue / Pull Request 评论
 
-<Route author="TonyRL" example="/github/comments/DIYgod/RSSHub/8116" path="/github/comments/:user/:repo/:number" :paramsDesc="['用户名', '仓库', 'Issue 或 pull 编号']"/>
+<Route author="TonyRL" example="/github/comments/DIYgod/RSSHub/8116" path="/github/comments/:user/:repo/:number" :paramsDesc="['用户名', '仓库名', 'Issue 或 pull 编号']" radar="1" rssbud="1"/>
+
+### Wiki 历史
+
+<Route author="TonyRL" example="/github/wiki/flutter/flutter/Roadmap" path="/github/wiki/:user/:repo/:page?" :paramsDesc="['用户名', '仓库名', '页面 Slug，可在 URL 中找到，留空表示主页']" radar="1" rssbud="1"/>
 
 ## GitLab
 
@@ -395,6 +394,12 @@ GitHub 官方也提供了一些 RSS:
 
 <Route author="cf020031308 nczitzk xie-dongping" example="/hackernews/threads/comments_list/dang" path="/hackernews/:section?/:type?/:user?" :paramsDesc="['内容分区，见上表，默认为 `index`', '链接类型，见上表，默认为 `sources`', '设定用户，只在 `threads` 和 `submitted` 分区有效']" />
 
+## HackMD
+
+### Profile
+
+<Route author="Yukaii kaiix" example="/hackmd/profile/hackmd" path="/hackmd/profile/:path" :paramsDesc="['個人名稱路徑，或團隊網址']" radar="1"/>
+
 ## HelloGitHub
 
 ### 热门
@@ -448,7 +453,7 @@ GitHub 官方也提供了一些 RSS:
 
 ### 月刊
 
-<Route author="moke8 nczitzk" example="/hellogithub/volume" path="/hellogithub/volume"/>
+<Route author="moke8 nczitzk CaoMeiYouRen" example="/hellogithub/volume" path="/hellogithub/volume"/>
 
 ## Hex-Rays
 
@@ -781,6 +786,34 @@ GitHub 官方也提供了一些 RSS:
 
 <Route author="kaiili" example="/secnews" path="/secnews" />
 
+## 北京智源人工智能研究院
+
+### 智源社区
+
+<Route author="TonyRL" example="/baai/hub" path="/baai/hub/:tagId?/:sort?/:range?" :paramsDesc="['社群 ID，可在 [社群页](https://hub.baai.ac.cn/taglist) 或 URL 中找到', '分类，见下表，默认为 `new`', '时间跨度，仅在分类 `readCnt` 时有效']" radar="1">
+
+分类
+
+| 最热  | 最新  | 头条      |
+| --- | --- | ------- |
+| hot | new | readCnt |
+
+时间跨度
+
+| 3 天 | 7 天 | 30 天 |
+| --- | --- | ---- |
+| 3   | 7   | 30   |
+
+</Route>
+
+### 智源社区 - 活动
+
+<Route author="TonyRL" example="/baai/hub/events" path="/baai/hub/events" radar="1"/>
+
+### 智源社区 - 评论
+
+<Route author="TonyRL" example="/baai/hub/comments" path="/baai/hub/comments" radar="1"/>
+
 ## 饿了么开放平台
 
 ### 商家开放平台公告
@@ -1019,6 +1052,10 @@ GitHub 官方也提供了一些 RSS:
 
 <Route author="solstice23" example="/luogu/user/feed/1" path="/luogu/user/feed/:uid" :paramsDesc="['用户 UID']" radar="1" rssbud="1"/>
 
+### 用户博客
+
+<Route author="ftiasch" example="/luogu/user/blog/ftiasch" path="/luogu/user/blog/:name" :paramsDesc="['博客名称']" radar="1" rssbud="1"/>
+
 ## 码农俱乐部
 
 ### 话题
@@ -1118,6 +1155,18 @@ GitHub 官方也提供了一些 RSS:
 | 前端艺术家 | 飞冰早报 |
 | ----- | ---- |
 | 0     | 1    |
+
+</Route>
+
+## 前端早早聊
+
+### 文章
+
+<Route author="shaomingbo" example="/zaozao/article/quality"  path="/zaozao/article/:type?" :paramsDesc="['文章分类']" radar="1">
+
+| 精品推荐      | 技术干货    | 职场成长   | 社区动态      | 组件物料     | 行业动态     |
+| --------- | ------- | ------ | --------- | -------- | -------- |
+| recommend | quality | growth | community | material | industry |
 
 </Route>
 
