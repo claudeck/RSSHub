@@ -185,17 +185,29 @@ $ cd RSSHub
 
 下载完成后，需要安装依赖（开发不要加 `--production` 参数）
 
-使用 `yarn`
+<code-group>
+<code-block title="pnpm" active>
 
 ```bash
-$ yarn install --production
+pnpm install --prod
 ```
 
-或 `npm`
+</code-block>
+<code-block title="yarnv1">
 
 ```bash
-$ npm ci --production
+yarn --production
 ```
+
+</code-block>
+<code-block title="npm">
+
+```bash
+npm install --omit=dev
+```
+
+</code-block>
+</code-group>
 
 由于众所周知的原因，在中国使用 `npm` 下载依赖十分缓慢，建议挂一个代理或者考虑使用 [NPM 镜像](https://npm.taobao.org/)
 
@@ -286,6 +298,12 @@ in pkgs.stdenv.mkDerivation {
 }
 ```
 
+## 部署到 Railway
+
+包含自动更新。
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/QxW\_\_f?referralCode=9wT3hc)
+
 ## 部署到 Heroku
 
 ### 注意
@@ -351,6 +369,13 @@ $ flyctl secrets set CACHE_TYPE=redis REDIS_URL='<刚才的连接字符串>'
 每月只需 1 美元即可运行 RSSHub。包括自动更新和 5 美元的免费起始额度。
 
 [![Run on PikaPods](https://www.pikapods.com/static/run-button.svg)](https://www.pikapods.com/pods?run=rsshub)
+
+## 部署到 Zeabur
+
+1.  前往 [Zeabur 完成注册](https://dash.zeabur.com)
+2.  创建一个新项目
+3.  在项目中选择创建新服务，选择从**服务市场**部署。
+4.  添加域名，若使用自定义域名，可参见 [Zeabur 的域名绑定文档](https://docs.zeabur.com/zh-CN/deploy/domain-binding)。
 
 ## 部署到 Google App Engine
 
@@ -489,7 +514,7 @@ RSSHub 支持 `memory` 和 `redis` 两种缓存方式
 
 #### 代理 URI
 
-`PROXY_URI`: 代理 URI，支持 socks4, socks5（本地查询域名的 SOCKS5，不推荐使用）, socks5h（传域名的 SOCKS5，推荐使用，以防止 DNS 污染或 DNS 泄露）, http, https，具体以[socks-proxy-agent](https://www.npmjs.com/package/socks-proxy-agent) NPM 包的支持为准，也可参考[curl 中 SOCKS 代理协议的用法](https://daniel.haxx.se/blog/2020/05/26/curl-ootw-socks5/)。
+`PROXY_URI`: 代理 URI，支持 socks4, socks5（本地查询域名的 SOCKS5，不推荐使用）, socks5h（传域名的 SOCKS5，推荐使用，以防止 DNS 污染或 DNS 泄露）, http, https，具体以 [socks-proxy-agent](https://www.npmjs.com/package/socks-proxy-agent) NPM 包的支持为准，也可参考[curl 中 SOCKS 代理协议的用法](https://daniel.haxx.se/blog/2020/05/26/curl-ootw-socks5/)。
 
 > 代理 URI 的格式为：
 >
@@ -547,7 +572,7 @@ RSSHub 支持使用访问密钥 / 码，白名单和黑名单三种方式进行�
 
 访问码为 访问密钥 + 路由 共同生成的 md5，例如：
 
-| 访问密钥        | 路由                | 生成过程                                     | 访问码                              |
+| 访问密钥    | 路由              | 生成过程                                 | 访问码                           |
 | ----------- | ----------------- | ---------------------------------------- | -------------------------------- |
 | ILoveRSSHub | /qdaily/column/59 | md5('/qdaily/column/59' + 'ILoveRSSHub') | 0f820530128805ffc10351f22b5fd121 |
 
@@ -557,11 +582,11 @@ RSSHub 支持使用访问密钥 / 码，白名单和黑名单三种方式进行�
 
 访问密钥 / 码与黑白名单的访问控制关系如下：
 
-|       | 正确访问密钥 / 码 | 错误访问密钥 / 码 | 无访问密钥 / 码 |
-| ----- | ---------- | ---------- | --------- |
-| 在白名单中 | ✅          | ✅          | ✅         |
-| 在黑名单中 | ✅          | ❌          | ❌         |
-| 无黑白名单 | ✅          | ❌          | ❌         |
+|            | 正确访问密钥 / 码 | 错误访问密钥 / 码 | 无访问密钥 / 码 |
+| ---------- | ----------------- | ----------------- | --------------- |
+| 在白名单中 | ✅                | ✅                | ✅              |
+| 在黑名单中 | ✅                | ❌                | ❌              |
+| 无黑白名单 | ✅                | ❌                | ❌              |
 
 ### 日志配置
 
@@ -677,6 +702,9 @@ RSSHub 支持使用访问密钥 / 码，白名单和黑名单三种方式进行�
         4.  找到 <https://webapp.bupt.edu.cn/extensions/wap/news/list.html?p-1&type=xnxw> 请求
         5.  找到请求头中的 Cookie
 
+-   Civitai
+    -   `CIVITAI_COOKIE`: Civitai 登录后的 cookie 值
+
 -   discuz cookies 设定
 
     -   `DISCUZ_COOKIE_{cid}`: 某 Discuz 驱动的论坛，用户注册后的 Cookie 值，cid 可自由设定，取值范围 \[00, 99], 使用 discuz 通用路由时，通过指定 cid 来调用该 cookie
@@ -721,7 +749,8 @@ RSSHub 支持使用访问密钥 / 码，白名单和黑名单三种方式进行�
 
 -   Iwara:
 
-    -   `IWARA_COOKIE`: Iwara 登录后的 Cookie 值
+    -   `IWARA_USERNAME`: Iwara 用户名
+    -   `IWARA_PASSWORD`: Iwara 密码
 
 -   Last.fm 全部路由：[申请地址](https://www.last.fm/api/)
 
