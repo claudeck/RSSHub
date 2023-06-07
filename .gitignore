@@ -1,11 +1,14 @@
 .DS_Store
 .env
+.eslintcache
 .idea
 .log
 .now
 .vercel
 .vscode
 .yarn
+.yarnrc.yml
+.pnp*
 
 *.swp
 *.iml
